@@ -5,10 +5,7 @@
     <meta charset="utf-8" name="viewport" content="width=device-width" />
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet" 
           integrity="sha384-fUMURLTdEcpeYHly3PAwggI3l2UvdHNg/I+8LRph7hLDcAZm77YfDx3Tjum9d3vK" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-          crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
     <style>
       body {
         background-image: url('http://rfinton.github.io/cnb/images/homeImage.jpg');
@@ -19,19 +16,26 @@
       }
       
       .body-content {
+        background-color: #0E7835;
         background-image: url('http://rfinton.github.io/cnb/images/copyBackground.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: top left;
         margin-top: 45%;
         padding: 2%;
-        height: 437px;
       }
       
-      .info {
+      .info1 {
         color: #0E7835;
-        font-weight: 500;
         font-size: 18pt;
+        font-weight: 500;
+        font-size-adjust: none;
+      }
+      
+      .info2 {
+        color: white;
+        font-size: 18pt;
+        font-weight: 500;
         font-size-adjust: none;
       }
       
@@ -41,8 +45,79 @@
       
       .title {
         color: white;
-        font-size: 250%;
+        font-size: 24pt;
+        font-size-adjust: none;
         font-weight: bold;
+        margin: 2% 0;
+      }
+      
+      .rsvp {
+        text-align: right;
+      }
+      
+      .rsvp a img {
+        width: 50%;
+        max-width: 230px;
+      }
+      
+      .mobile-invite {
+        background-color: #0E7835;
+        display: none;
+      }
+      
+      @media screen and (max-width: 1024px){
+        .body-content {
+          background-image: url('');
+          padding: 0;
+        }
+        
+        .no-padding {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        
+        .normal-invite {
+          display: none;
+        }
+        
+        .mobile-invite {
+          display: block;
+          padding: 5%;
+        }
+        
+        .info1 {
+          background-color: white;
+          padding: 4%;
+          margin-bottom: 5%;
+        }
+        
+        .info1, .title {
+          text-align: center;
+          font-size: 100%;
+        }
+        
+        .info2 {
+          text-align: left;
+          font-size: 100%;
+        }
+        
+        .title {
+          font-size: 150%;
+        }
+        
+        .rsvp {
+          text-align: center;
+        }
+      }
+      
+      @media screen and (min-width: 768px){
+        .info1, .info2 {
+          font-size: 18pt;
+        }
+        
+        .title {
+          font-size: 250%;
+        }
       }
     </style>
   </head>
@@ -50,29 +125,57 @@
     <div class="container-fluid">
       
       <div class="row body-content">
-        <div class="col-xs-4">
-          <div>
-            <span class="info">8811 S. Yale Avenue, Ste 100 <br>
-            Tulsa, OK 74137 <br>
-            On the East Side of Yale <br>
-            Thursday, June 30th, 4-7pm <br>
-            Valet Hosted</span>
-            <br><br>
-            <img width="70%" src="http://rfinton.github.io/cnb/images/calendarButton.png" alt="cal" />
+        <div class="mobile-invite">
+          <div class="title">VIP Invitation</div>
+          <p class="info2">Join us for our Grand Opening at our new Tulsa Location. There will be fun, food, beverages and live entertainment by Larry Cagle</p>
+          <p class="info2">Click the email link below and give us your first name, last name and how many guests will be attending.</p>
+          <div class="rsvp">
+            <a href="mailto:rsvp@cnb-ok.com?subject=CNB%20Open%20House">
+              <img src="http://rfinton.github.io/cnb/images/rsvpButton.png" alt="rsvp" />
+            </a>
           </div>
         </div>
         
-        <div class="col-xs-1"> </div>
-        
-        <div class="col-xs-7">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 no-padding">
           <div>
-            <span class="title">VIP Invitation</span>
+            <div class="info1">
+              8811 S. Yale Avenue, Ste 100 <br>
+              Tulsa, OK 74137 <br>
+              On the East Side of Yale <br>
+              Thursday, June 30th, 4-7pm <br>
+              Valet Hosted
+              <div class="calendar-btn">
+                <span class="addtocalendar atc-style-blue">
+                  <var class="atc_event">
+                    <var class="atc_date_start">2016-06-30 16:00:00</var>
+                    <var class="atc_date_end">2016-06-30 19:00:00</var>
+                    <var class="atc_timezone">America/Chicago</var>
+                    <var class="atc_title">Central National Bank - Open House Event</var>
+                    <var class="atc_description">Central Nation Bank grand opening</var>
+                    <var class="atc_location">8811 S. Yale Ave., Ste 100, Tulsa, OK 74137</var>
+                    <var class="atc_organizer">Bestsy Groves</var>
+                    <var class="atc_organizer_email">rsvp@cnb-ok.com</var>
+                  </var>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1"> </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+          <div class="normal-invite">
+            <div class="title">VIP Invitation</div>
+            <p class="info2">Join us for our Grand Opening at our new Tulsa Location. There will be fun, food, beverages and live entertainment by Larry Cagle</p>
+            <p class="info2">Click the email link below and give us your first name, last name and how many guests will be attending.<br>
             <br>
-            <span class="info" style="color:white">Join us for our Grand Opening at our new Tulsa Location. There will be fun, food, beer, wine and live entertainment by Larry Cagle</span>
-            <br><br>
-            <span class="info" style="color:white">Click the email link below and give us your first name, last name and how many guests will be attending.</span>
-            <br>
-            <img src="http://rfinton.github.io/cnb/images/rsvpButton.png" alt="rsvp" />
+            </p>
+            <div class="rsvp">
+              <a href="mailto:rsvp@cnb-ok.com?subject=CNB%20Open%20House">
+                <img width="30%" src="http://rfinton.github.io/cnb/images/rsvpButton.png" alt="rsvp" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -81,5 +184,36 @@
         <img src="http://rfinton.github.io/cnb/images/mapImage.jpg" alt="map" />
       </div>
     </div>
+    <script type="text/javascript">
+      (function () {
+        if (window.addtocalendar)
+          if(typeof window.addtocalendar.start == "function")
+            return;
+
+          if (window.ifaddtocalendar == undefined) { 
+            window.ifaddtocalendar = 1;
+            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+            s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+            s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+            var h = d[g]('body')[0];h.appendChild(s); 
+          }
+      })();
+      
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+          crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <style>
+      .atc-style-blue .atcb-link,
+      .atc-style-blue .atcb-link:hover,
+      .atc-style-blue .atcb-link:active,
+      .atc-style-blue .atcb-link:focus { background: #0E7835; font-size: 18pt; margin: 3%; padding: 6%; }
+      .addtocalendar { margin: 3%; width: 70%; text-align: center; }
+      
+      @media screen and (max-width:1024px){
+        .atc-style-blue .atcb-link { font-size: 14pt; }
+      }
   </body>
 </html>
